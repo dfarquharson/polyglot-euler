@@ -1,5 +1,9 @@
 package io.dfarquharson.euler
 
+fun main() {
+    println(Problem2.sumOfEvenFibsAtOrBelowN(4_000_000))
+}
+
 object Problem2 {
 
     fun sumOfEvenFibsAtOrBelowN(n: Int): Int {

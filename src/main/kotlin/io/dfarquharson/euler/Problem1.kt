@@ -1,5 +1,9 @@
 package io.dfarquharson.euler
 
+fun main() {
+    println(Problem1.sumOfMultiplesOf3or5BelowN(1_000))
+}
+
 object Problem1 {
 
     fun sumOfMultiplesOf3or5BelowN(n: Int): Int {
