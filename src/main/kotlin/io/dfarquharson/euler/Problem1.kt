@@ -1,7 +1,7 @@
 package io.dfarquharson.euler
 
 fun main() {
-    println(Problem1.sumOfMultiplesOf3or5BelowN(1_000))
+    println(Problem1.run())
 }
 
 object Problem1 {
@@ -12,6 +12,10 @@ object Problem1 {
             .take(n - 1)
             .filter { multiples.isCleanMultiple(it) }
             .sum()
+    }
+
+    fun run(): Int {
+        return sumOfMultiplesOf3or5BelowN(1_000)
     }
 
 }

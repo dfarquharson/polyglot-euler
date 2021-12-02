@@ -1,7 +1,7 @@
 package io.dfarquharson.euler
 
 fun main() {
-    println(Problem2.sumOfEvenFibsAtOrBelowN(4_000_000))
+    println(Problem2.run())
 }
 
 object Problem2 {
@@ -11,6 +11,10 @@ object Problem2 {
             .takeWhile { it <= n }
             .filter { it % 2 == 0 }
             .sum()
+    }
+
+    fun run(): Int {
+        return sumOfEvenFibsAtOrBelowN(4_000_000)
     }
 
 }
