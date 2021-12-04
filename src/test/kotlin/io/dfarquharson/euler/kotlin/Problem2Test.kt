@@ -1,4 +1,4 @@
-package io.dfarquharson.euler
+package io.dfarquharson.euler.kotlin
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

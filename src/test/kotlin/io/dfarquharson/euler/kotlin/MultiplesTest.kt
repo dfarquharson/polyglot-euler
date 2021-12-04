@@ -1,4 +1,4 @@
-package io.dfarquharson.euler
+package io.dfarquharson.euler.kotlin
 
 import org.junit.jupiter.api.DynamicTest
 import org.junit.jupiter.api.TestFactory

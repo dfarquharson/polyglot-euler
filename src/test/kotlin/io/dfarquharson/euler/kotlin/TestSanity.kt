@@ -1,4 +1,4 @@
-package io.dfarquharson.euler
+package io.dfarquharson.euler.kotlin
 
 import kotlin.test.Ignore
 import kotlin.test.Test
