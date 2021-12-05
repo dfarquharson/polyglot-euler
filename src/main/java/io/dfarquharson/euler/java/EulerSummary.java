@@ -6,14 +6,18 @@ import io.dfarquharson.euler.java.problems.Problem2;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-public class EulerSummary {
+public class EulerSummary implements Supplier<String> {
+
+    @Override
+    public String get() {
+        return String.join("\n", Stream.of(
+                new Problem1(),
+                new Problem2()
+        ).map(Supplier::get).toList());
+    }
 
     public static void main(String[] args) {
-        Stream.of(
-                        new Problem1(),
-                        new Problem2()
-                ).map(Supplier::get)
-                .forEach(System.out::println);
+        System.out.println(new EulerSummary().get());
     }
 
 }

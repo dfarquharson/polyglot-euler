@@ -41,7 +41,7 @@ tasks.withType<KotlinCompile> {
 }
 
 application {
-    mainClass.set("io.dfarquharson.euler.kotlin.EulerSummaryKt")
+    mainClass.set("io.dfarquharson.euler.PolyglotSummary")
 }
 
 tasks.register("run-kotlin", JavaExec::class.java) {
