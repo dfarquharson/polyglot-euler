@@ -25,7 +25,7 @@ object Problem2 {
 
 object Fibonacci {
 
-    fun fibs() = sequence<Int> {
+    fun fibs(): Sequence<Int> = sequence {
         var elements: Pair<Int, Int> = Pair(1, 2)
         while (true) {
             yield(elements.first)

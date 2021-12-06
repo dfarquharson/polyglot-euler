@@ -13,6 +13,7 @@ class EulerSummary : Supplier<String> {
         return listOf(
             "Problem 1 result: ${Problem1.run()}",
             "Problem 2 result: ${Problem2.run()}",
+            "Problem 3 result: ${Problem3.run()}",
         ).joinToString(separator = "\n")
     }
 
