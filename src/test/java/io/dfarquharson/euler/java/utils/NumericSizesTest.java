@@ -30,4 +30,10 @@ class NumericSizesTest {
                 .isEqualTo(-9_223_372_036_854_775_808L);
     }
 
+    @Test
+    void largestProblem4NumberFitsInInteger() {
+        assertThat(999 * 999)
+                .isLessThan(Integer.MAX_VALUE);
+    }
+
 }
