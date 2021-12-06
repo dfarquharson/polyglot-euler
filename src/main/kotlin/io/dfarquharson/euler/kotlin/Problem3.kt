@@ -31,6 +31,10 @@ object Primes {
             .toSet()
     }
 
+    fun nthPrime(n: Long): Long {
+        return primes().take(n.toInt()).last()
+    }
+
 }
 
 object Factors {

@@ -45,4 +45,27 @@ internal class PrimesTest {
         assertEquals(expected, actual)
     }
 
+    @TestFactory
+    fun `nth prime`(): List<DynamicTest> = listOf(
+        Pair(6L, 13L),
+        Pair(10_001L, 104743L)
+    ).map { (n: Long, expected: Long) ->
+        DynamicTest.dynamicTest("${n}th prime is $expected") {
+            val actual: Long = Primes.nthPrime(n)
+            assertEquals(expected, actual)
+        }
+    }
+
+    @TestFactory
+    fun `sum of primes below n`(): List<DynamicTest> = listOf(
+        Pair(10L, 17L),
+        Pair(100L, 1060L),
+//        Pair(2_000_000L, 142913828922L),  // This is expensive (~5 seconds), so we don't want to run it too frequently/redundantly
+    ).map { (n: Long, expected: Long) ->
+        DynamicTest.dynamicTest("Sum of primes below $n is $expected") {
+            val actual: Long = Primes.primes().takeWhile { it < n }.sum()
+            assertEquals(expected, actual)
+        }
+    }
+
 }
