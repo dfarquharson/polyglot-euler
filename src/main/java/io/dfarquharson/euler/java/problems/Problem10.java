@@ -11,6 +11,7 @@ public class Problem10 implements Supplier<String> {
         return "Problem 10 result: %d".formatted(
                 new Primes()
                         .get()
+                        .parallel()
                         .takeWhile(n -> n < 2_000_000)
                         .sum()
         );
